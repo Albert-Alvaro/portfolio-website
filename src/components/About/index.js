@@ -27,7 +27,7 @@ const About = () => {
                 </h1>
 
                 <p>
-                    I am currently a fresh graduate who is aspiring to be a software and web developer, I am currently located in Singapore and am looking for a job
+                    I am currently a fresh graduate who is aspiring to be a software and web developer, I am currently located in Singapore and looking for a job
                 </p>
                 <p>
                     I am passionate about coding and programing, enjoying the task of creating algorithms and software. I am experienced in Python and Java, and I correspondingly 

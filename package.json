@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
-    "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -17,16 +16,12 @@
     "loaders.css": "^0.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-fontawesome": "^1.7.1",
     "react-leaflet": "^4.2.1",
     "react-loaders": "^3.0.1",
-    "react-native-sqlite-storage": "^6.0.1",
     "react-router-dom": "^6.23.0",
     "react-scripts": "5.0.1",
     "sass": "^1.75.0",
-    "sqlite3": "^5.1.7",
-    "web-vitals": "^2.1.4",
-    "yarn": "^1.22.22"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

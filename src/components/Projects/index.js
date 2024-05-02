@@ -111,20 +111,7 @@ const Projects = () => {
                 </div>
                 <div className="square-icon">
                     <img src={p6_1} alt="pyja"/>
-                    <h4>Python and Java Projects</h4>
-                    <div className="button-modal">
-                        <motion.button
-                            whileHover={{ scale: 1.1}}
-                            whileTap={{scale:0.9}}
-                            className="button-1"
-                        >
-                            READ MORE
-                        </motion.button>
-                    </div>
-                </div>
-                <div className="square-icon">
-                    <img src={p6_1} alt="pyja"/>
-                    <h4>Python and Java Projects</h4>
+                    <h4>3D Model Projects</h4>
                     <div className="button-modal">
                         <motion.button
                             whileHover={{ scale: 1.1}}

@@ -1,37 +1,16 @@
 import './index.scss'
 import LogoA from '../../assets/images/logo-a.png'
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap-trial';
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
 const Logo = () => {
 
-    const bgRef = useRef();
-    const outlineLogoRef = useRef();
-    const solidLogoRef = useRef(); 
-
-    useEffect(() => {
-        gsap.registerPlugin(DrawSVGPlugin)
-
-        gsap.timeline()
-        .to(bgRef.current, {
-            duration: 1,
-            opacity: 1,
-        })
-        .from(outlineLogoRef.current, {
-            drawSVG: 0,
-            duration: 20 ,
-        })
-    }, [])
-
     return (
-        <div className='logo-container' ref={bgRef}>
-            <img ref={solidLogoRef} className='solid-logo' src={LogoA} alt='A' />
+        <div className='logo-container'>
+            <img  className='solid-logo' src={LogoA} alt='A' />
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="493.000000pt" height="500.000000pt" viewBox="0 0 493.000000 500.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
-fill="none" className='svg-container'  ref={outlineLogoRef}>
+fill="none" className='svg-container'  >
 <path d="M0 2500 l0 -2500 241 0 c157 0 238 3 234 10 -4 7 99 10 303 10 263 0
 311 2 322 15 7 8 9 15 4 15 -5 0 -4 4 3 8 6 4 13 16 15 27 4 24 26 50 35 41 3
 -3 -2 -14 -11 -25 -12 -13 -14 -20 -5 -23 7 -2 0 -18 -21 -41 l-32 -37 1600 0
@@ -210,8 +189,8 @@ c0 -12 -22 -32 -34 -32 -6 0 -3 5 7 11 9 6 15 14 12 20 -4 5 -1 9 4 9 6 0 11
 -4 11 -8z m-30 -72 c0 -5 -8 -10 -17 -10 -15 0 -16 2 -3 10 19 12 20 12 20 0z
 m-20 -50 c0 -5 -8 -10 -17 -10 -15 0 -16 2 -3 10 19 12 20 12 20 0z m-10 -58
 c0 -5 -9 -17 -21 -28 -15 -13 -20 -14 -17 -4 6 28 38 54 38 32z M63 253 c9 -2 23 -2 30 0 6 3 -1 5 -18 5 -16 0 -22 -2 -12 -5z "/>
-<path ref={outlineLogoRef} d="M63 253 c9 -2 23 -2 30 0 6 3 -1 5 -18 5 -16 0 -22 -2 -12 -5z"/>
-<path ref={outlineLogoRef} d="M3878 253 c6 -2 18 -2 25 0 6 3 1 5 -13 5 -14 0 -19 -2 -12 -5z"/>
+<path  d="M63 253 c9 -2 23 -2 30 0 6 3 -1 5 -18 5 -16 0 -22 -2 -12 -5z"/>
+<path d="M3878 253 c6 -2 18 -2 25 0 6 3 1 5 -13 5 -14 0 -19 -2 -12 -5z"/>
 </g>
 </svg>
         </div>

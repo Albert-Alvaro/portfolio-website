@@ -8,9 +8,14 @@ import p3_1 from "../../assets/images/p3-1.png"
 import p4_1 from "../../assets/images/p4-1.png"
 import p5_1 from "../../assets/images/p5-1.png"
 import p6_1 from "../../assets/images/p6-1.png"
+import p7_1 from "../../assets/images/p7-1.png"
+
 import {motion} from "framer-motion"
+import { Link } from "react-router-dom"
+
 
 const Projects = () => {
+
     const [letterClass, setLetterClass] = useState('text-animated')
     useEffect(() => {
         setTimeout(() => {
@@ -35,6 +40,7 @@ const Projects = () => {
                     <img src={p1_1} alt="recipe"/>
                     <h4>Recipe Generation App</h4>
                     <div className="button-modal">
+                        <Link to={{ pathname:'Projectsdesc/0'}}>
                         <motion.button
                             whileHover={{ scale: 1.1}}
                             whileTap={{scale:0.9}}
@@ -42,12 +48,14 @@ const Projects = () => {
                         >
                             READ MORE
                         </motion.button>
+                        </Link>
                     </div>
                 </div>
                 <div className="square-icon">
                     <img src={p2_1} alt="survey"/>
                     <h4>Survey Question Creator </h4>
                     <div className="button-modal">
+                    <Link to={{ pathname:'Projectsdesc/1'}}>
                         <motion.button
                             whileHover={{ scale: 1.1}}
                             whileTap={{scale:0.9}}
@@ -55,12 +63,14 @@ const Projects = () => {
                         >
                             READ MORE
                         </motion.button>
+                        </Link>
                     </div>
                 </div>
                 <div className="square-icon">
                     <img src={p3_1} alt="chat"/>
                     <h4>AI Chatbot</h4>
                     <div className="button-modal">
+                    <Link to={{ pathname:'Projectsdesc/2'}}>
                         <motion.button
                             whileHover={{ scale: 1.1}}
                             whileTap={{scale:0.9}}
@@ -68,12 +78,14 @@ const Projects = () => {
                         >
                             READ MORE
                         </motion.button>
+                        </Link>
                     </div>
                 </div>
                 <div className="square-icon">
                     <img src={p4_1} alt="id8"/>
                     <h4>University Club Website</h4>
                     <div className="button-modal">
+                    <Link to={{ pathname:'Projectsdesc/3'}}>
                         <motion.button
                             whileHover={{ scale: 1.1}}
                             whileTap={{scale:0.9}}
@@ -81,12 +93,14 @@ const Projects = () => {
                         >
                             READ MORE
                         </motion.button>
+                        </Link>
                     </div>
                 </div>
                 <div className="square-icon">
                     <img src={p5_1} alt="android"/>
                     <h4>Android Apps</h4>
                     <div className="button-modal">
+                    <Link to={{ pathname:'Projectsdesc/4'}}>
                         <motion.button
                             whileHover={{ scale: 1.1}}
                             whileTap={{scale:0.9}}
@@ -94,12 +108,14 @@ const Projects = () => {
                         >
                             READ MORE
                         </motion.button>
+                        </Link>
                     </div>
                 </div>
                 <div className="square-icon">
                     <img src={p6_1} alt="pyja"/>
                     <h4>Python and Java Projects</h4>
                     <div className="button-modal">
+                    <Link to={{ pathname:'Projectsdesc/5'}}>
                         <motion.button
                             whileHover={{ scale: 1.1}}
                             whileTap={{scale:0.9}}
@@ -107,12 +123,14 @@ const Projects = () => {
                         >
                             READ MORE
                         </motion.button>
+                        </Link>
                     </div>
                 </div>
                 <div className="square-icon">
-                    <img src={p6_1} alt="pyja"/>
+                    <img src={p7_1} alt="pyja"/>
                     <h4>3D Model Projects</h4>
                     <div className="button-modal">
+                    <Link to={{ pathname:'Projectsdesc/6'}}>
                         <motion.button
                             whileHover={{ scale: 1.1}}
                             whileTap={{scale:0.9}}
@@ -120,6 +138,7 @@ const Projects = () => {
                         >
                             READ MORE
                         </motion.button>
+                        </Link>
                     </div>
                 </div>
             </div>

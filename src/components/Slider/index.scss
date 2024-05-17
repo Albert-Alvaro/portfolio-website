@@ -1,0 +1,40 @@
+.slider{
+    position: relative;
+    width: 800px;
+    height: auto;
+    margin: auto;
+}
+
+.slider-img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 6;
+}
+
+.s-button-p{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 7;
+}
+
+.s-button-n{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 7; 
+}
+
+.hidden-img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    opacity: 1;
+    position: flex;
+    z-index: 4;
+}
+.fade-in {
+    animation : fadeIn 3s;
+}

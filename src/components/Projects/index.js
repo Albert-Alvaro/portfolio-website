@@ -39,6 +39,7 @@ const Projects = () => {
                 <div className="square-icon">
                     <img src={p1_1} alt="recipe"/>
                     <h4>Recipe Generation App</h4>
+                    <h3>(University project which earned High Distinction)</h3>
                     <div className="button-modal">
                         <Link to={{ pathname:'Projectsdesc/1'}}>
                         <motion.button
@@ -54,6 +55,7 @@ const Projects = () => {
                 <div className="square-icon">
                     <img src={p2_1} alt="survey"/>
                     <h4>Survey Question Creator </h4>
+                    <h3>(University project which earned Distinction)</h3>
                     <div className="button-modal">
                     <Link to={{ pathname:'Projectsdesc/2'}}>
                         <motion.button
@@ -69,6 +71,7 @@ const Projects = () => {
                 <div className="square-icon">
                     <img src={p3_1} alt="chat"/>
                     <h4>AI Chatbot</h4>
+                    <h3>(Club Project)</h3>
                     <div className="button-modal">
                     <Link to={{ pathname:'Projectsdesc/3'}}>
                         <motion.button
@@ -84,6 +87,7 @@ const Projects = () => {
                 <div className="square-icon">
                     <img src={p4_1} alt="id8"/>
                     <h4>University Club Website</h4>
+                    <h3>(Club Project)</h3>
                     <div className="button-modal">
                     <Link to={{ pathname:'Projectsdesc/4'}}>
                         <motion.button
@@ -99,6 +103,7 @@ const Projects = () => {
                 <div className="square-icon">
                     <img src={p5_1} alt="android"/>
                     <h4>Android Apps</h4>
+                    <h3>(University project which earned Credit)</h3>
                     <div className="button-modal">
                     <Link to={{ pathname:'Projectsdesc/5'}}>
                         <motion.button
@@ -114,6 +119,7 @@ const Projects = () => {
                 <div className="square-icon">
                     <img src={p6_1} alt="pyja"/>
                     <h4>Python and Java Projects</h4>
+                    <h3>(University projects which earned Distinctions)</h3>
                     <div className="button-modal">
                     <Link to={{ pathname:'Projectsdesc/6'}}>
                         <motion.button
@@ -129,6 +135,7 @@ const Projects = () => {
                 <div className="square-icon">
                     <img src={p7_1} alt="pyja"/>
                     <h4>3D Model Projects</h4>
+                    <h3>(University project which earned High Distinction)</h3>
                     <div className="button-modal">
                     <Link to={{ pathname:'Projectsdesc/7'}}>
                         <motion.button

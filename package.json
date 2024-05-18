@@ -2,6 +2,7 @@
   "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://albert-alvaro.github.io/portfolio-website",
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
@@ -36,6 +37,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -63,5 +66,8 @@
     "fs": false,
     "path": false,
     "os": false
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }

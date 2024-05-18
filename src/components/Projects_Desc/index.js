@@ -14,7 +14,6 @@ import p4_1 from "../../assets/images/p4-1.png"
 import p4_2 from "../../assets/images/p4-2.png"
 import p4_3 from "../../assets/images/p4-3.png"
 import p5_1 from "../../assets/images/p5-1.png"
-import p5_2 from "../../assets/images/p5-2.png"
 import p6_1 from "../../assets/images/p6-1.png"
 import p7_1 from "../../assets/images/p7-1.png"
 import p7_2 from "../../assets/images/p7-2.png"
@@ -46,7 +45,7 @@ const img = [
     {
         ig: "p5_1",
         image: p5_1,
-        imageList: [p5_1,p5_2]
+        imageList: [p5_1]
     },
     {
         ig: "p6_1",
@@ -70,6 +69,7 @@ const Projectdesc = () => {
     return(
         <>
         <div className='container project-desc'>
+            
             <div className='cont'>
                 <div className='text-zone'>
                     <p>{spec_data.content}</p>

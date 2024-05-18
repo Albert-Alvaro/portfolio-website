@@ -78,3 +78,88 @@
         }
     }
 }
+@media only screen and (device-width: 600px),
+only screen and (max-width:600px) {
+    .home-page{
+        .text-zone{
+            position: absolute;
+            left: 30%;
+            top: 60%;
+            transform: translateY(-50%);
+            width: 40%;
+            height: 100%;
+            max-height: 90%;
+        }
+    
+        h1{
+            color: #fff;
+            font-size: 200%;
+            margin: 0;
+            font-family: 'Coolvetica';
+            font-weight: 400;
+    
+            &::before {
+                content: '<h1>';
+                font-family: 'La Belle Aurore';
+                color: #5CE1E6;
+                font-size: 18px;
+                position: absolute;
+                top: 0.05%;
+                left: 2%;
+                opacity: 0.6;
+            }
+    
+            &::after{
+                content: '</h1>';
+                font-family: 'La Belle Aurore';
+                color: #5CE1E6;
+                font-size: 18px;
+                position: absolute;
+                bottom: 70%;
+                right: 70%;
+                animation: fadeIn 1s 1.7s backwards;
+                opacity: 0.6;
+            }
+    
+            img{
+                width: 33%;
+                margin-left: 20px;
+                opacity: 0;
+                height: auto;
+                animation: rotateIn 1s linear both;
+                animation-delay: 1.4s;
+            }
+        }
+    
+        h2 {
+            color: #8d8d8d;
+            margin-top: 80px;
+            font-weight: 400;
+            font-size: 150%;
+            font-family: sans-serif;
+            letter-spacing: 3px;
+            animation: fadeIn 1s 1.8s backwards;
+        }
+    
+        .flat-button{
+            color:#5CE1E6;
+            font-size: 130%;
+            font-weight: 400;
+            letter-spacing: normal;
+            font-family: sans-serif;
+            text-decoration: none;
+            padding: 10px 18px;
+            border: 1px solid #5CE1E6;
+            margin-top: 25px;
+            float: left;
+            animation: fadeIn 1s 1.8s backwards;
+            white-space: nowrap;
+            z-index: 10;
+    
+            &:hover{
+                background: #5CE1E6;
+                color: #333;
+            }
+        }
+    }
+}

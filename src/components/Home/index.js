@@ -21,6 +21,8 @@ const Home = () => {
     return (
         <>
         <div className="container home-page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <Logo />
             <div className="text-zone">
                 <h1>
                 <span className={letterClass}>H</span>  
@@ -36,7 +38,7 @@ const Home = () => {
                 <h2>Backend developer / Python developer / AI enthusiast</h2>
                 <Link to='/about' className='flat-button'>MORE ABOUT ME</Link>
             </div>
-            <Logo />
+            
         </div>
         <Loader type='pacman' />
         </>

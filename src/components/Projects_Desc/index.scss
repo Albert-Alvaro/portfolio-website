@@ -24,3 +24,34 @@
         color: black;
     }
 }
+
+@media only screen and (device-width: 600px),
+only screen and (max-width:600px) { 
+    .img-slider{
+        margin-top: 10%;
+        margin-left: 0;
+    }
+    .cont{
+        display: flex;
+    }
+    .back{
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 90%;
+        left: 20%;
+        .button-1{
+            background-color: #62b1dc;
+            color: black;
+            font-weight: 600;
+            text-align: center;
+            height: 30px;
+            width: 100px;
+            border-radius: 5px;
+        }
+        .button-1:hover{
+            background-image: linear-gradient(aqua, #03bffc);
+            color: black;
+        }
+    }
+}

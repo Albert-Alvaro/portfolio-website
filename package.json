@@ -1,8 +1,8 @@
 {
+  "homepage": "https://albert-alvaro.github.io/portfolio-website",
   "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://albert-alvaro.github.io/portfolio-website",
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",

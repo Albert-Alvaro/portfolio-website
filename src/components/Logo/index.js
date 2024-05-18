@@ -1,10 +1,8 @@
 import './index.scss'
-import LogoA from '../../assets/images/logo-a.png'
 const Logo = () => {
 
     return (
         <div className='logo-container'>
-            <img  className='solid-logo' src={LogoA} alt='A' />
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="493.000000pt" height="500.000000pt" viewBox="0 0 493.000000 500.000000"
  preserveAspectRatio="xMidYMid meet">

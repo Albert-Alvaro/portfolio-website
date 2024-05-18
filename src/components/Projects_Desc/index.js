@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import './index.scss'
 import {data} from '../../data'
 import p1_1 from "../../assets/images/p1-1.png"
@@ -19,7 +19,7 @@ import p6_1 from "../../assets/images/p6-1.png"
 import p7_1 from "../../assets/images/p7-1.png"
 import p7_2 from "../../assets/images/p7-2.png"
 import p7_3 from "../../assets/images/p7-3.png"
-
+import {motion} from "framer-motion"
 import Loader from 'react-loaders'
 import Slider from '../Slider'
 const img = [
@@ -70,12 +70,25 @@ const Projectdesc = () => {
     return(
         <>
         <div className='container project-desc'>
-            <div className='text-zone'>
-            <p>{spec_data.content}</p>
-            <div className='img-slider'>
-                <Slider slides={spec_img.imageList}/>
-            </div>
-            </div>
+            <div className='cont'>
+                <div className='text-zone'>
+                    <p>{spec_data.content}</p>
+                    <div className='img-slider'>
+                        <Slider slides={spec_img.imageList}/>
+                    </div>
+                </div>
+                <div className='back'>
+                        <Link to={{ pathname:'/projects'}}>
+                            <motion.button
+                                whileHover={{ scale: 1.1}}
+                                whileTap={{scale:0.9}}
+                                className="button-1"
+                            >
+                                Back
+                            </motion.button>
+                        </Link>
+                    </div>
+                </div>
         </div>
         <Loader type='pacman' />
         </>

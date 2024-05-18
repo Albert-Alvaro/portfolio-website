@@ -11,20 +11,41 @@
     border-radius: 20px;
     position: absolute;
     z-index: 6;
+    opacity: 1;
 }
 
 .s-button-p{
     position: absolute;
+    width: 5%;
+    height: 6%;
     top: 50%;
     left: 10px;
-    z-index: 7;
+    border-radius: 5px;
+    color: white;
+    background-color:black ;
+    z-index: 7; 
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+
 }
 
 .s-button-n{
     position: absolute;
+    width: 5%;
+    height: 6%;
     top: 50%;
     right: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color:black ;
     z-index: 7; 
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+
 }
 
 .hidden-img{
@@ -35,6 +56,6 @@
     position: flex;
     z-index: 4;
 }
-.fade-in {
+.anim {
     animation : fadeIn 3s;
 }

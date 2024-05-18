@@ -19,24 +19,25 @@ const Slider = ({slides}) => {
             >
                 {'<'}
             </button>
-            <button
-                onClick={nextImage}
-                className='s-button-n' 
-            >
-                {'>'}
-            </button>
+            <div className='anim'>
             <img 
                 src={slides[currentIndex]}
                 key={currentIndex}
                 alt={'alt'}
                 className='slider-img'
             />
+            </div>
             <img 
-                src={slides[(currentIndex - 1 + slides.length) % slides.length]}
-                key={currentIndex}
+                src={slides[(currentIndex + 1) % slides.length]}
                 alt={'alt'}
                 className='hidden-img'
             />  
+            <button
+                onClick={nextImage}
+                className='s-button-n' 
+            >
+                {'>'}
+            </button>
         </div>
     )
 }

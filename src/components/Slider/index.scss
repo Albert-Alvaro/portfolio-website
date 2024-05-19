@@ -60,6 +60,71 @@
     animation : fadeIn 3s;
 }
 
+@media only screen and (device-height: 600px),
+only screen and (max-height:600px) { 
+
+    .slider{
+        position: absolute;
+        width: 50%;
+        height: auto;
+        
+    }
+    
+    .slider-img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 4;
+        opacity: 1;
+    }
+    
+    .s-button-p{
+        position: absolute;
+        width: 10%;
+        height: 10%;
+        border-radius: 5px;
+        color: white;
+        background-color:black ;
+        z-index: 10; 
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    
+    }
+    
+    .s-button-n{
+        position: absolute;
+        width: 10%;
+        height: 10%;
+        top: 50%;
+        right: 10px;
+        border-radius: 5px;
+        color: white;
+        background-color:black ;
+        z-index: 7; 
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    
+    }
+    
+    .hidden-img{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        opacity: 1;
+        position: flex;
+        z-index: 4;
+    }
+    .anim {
+        animation : fadeIn 3s;
+    }
+
+}
+
 @media only screen and (device-width: 600px),
 only screen and (max-width:600px) { 
 

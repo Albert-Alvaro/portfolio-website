@@ -8,17 +8,8 @@ const Layout  = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <Sidebar />
         <div className='page'>
-            <span className='tags top-tags'>
-                &lt;body&gt;
-            </span>
 
             <Outlet/>
-
-            <span className='tags bottom-tags'>
-                &lt;body&gt;
-                <br />
-                <span className='bottom-tag-html'>&lt;/html&gt;</span>
-            </span>
 
         </div>
     </div>

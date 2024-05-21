@@ -149,6 +149,22 @@ const Projects = () => {
                         </Link>
                     </div>
                 </div>
+                <div className="square-icon">
+                    <img src={p7_1} alt="pyja"/>
+                    <h4>Space Invader Gmae</h4>
+                    <h3>(Personal Project)</h3>
+                    <div className="button-modal">
+                    <Link to={{ pathname:'game1'}}>
+                        <motion.button
+                            whileHover={{ scale: 1.1}}
+                            whileTap={{scale:0.9}}
+                            className="button-1"
+                        >
+                            Play Demo!
+                        </motion.button>
+                        </Link>
+                    </div>
+                </div>
             </div>
         </div>
         <Loader type='pacman' />

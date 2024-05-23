@@ -4,14 +4,17 @@
         left: 20%;
         top: 50%;
         transform: translateY(-50%);
-        width: 40%;
+        width: 35%;
+        height: 100%;
         max-height: 90%;
     }
 
     h1{
+        position: absolute;
+        top: 15%;
+        left: 1%;
         color: #fff;
-        font-size: 53px;
-        margin: 0;
+        font-size: 53px;      
         font-family: 'Coolvetica';
         font-weight: 400;
 
@@ -26,6 +29,8 @@
     }
 
     h2 {
+        position: absolute;
+        top: 50%;
         color: #ffffff;
         margin-top: 80px;
         font-weight: 600;
@@ -36,6 +41,8 @@
     }
 
     .flat-button{
+        position: absolute;
+        top: 65%;
         color:#5CE1E6;
         font-size: 130%;
         font-weight: 400;
@@ -60,17 +67,17 @@ only screen and (max-width:600px) {
     .home-page{
         .text-zone{
             position: absolute;
-            left: 30%;
-            top: 60%;
+            left: 25%;
+            top: 40%;
             transform: translateY(-50%);
-            width: 40%;
+            width: 67%;
             height: 100%;
             max-height: 90%;
         }
     
         h1{
             color: #fff;
-            font-size: 200%;
+            font-size: 300%;
             margin: 0;
             font-family: 'Coolvetica';
             font-weight: 400;
@@ -96,6 +103,8 @@ only screen and (max-width:600px) {
         }
     
         .flat-button{
+            position: absolute;
+            top: 75%;
             color:#5CE1E6;
             font-size: 130%;
             font-weight: 400;
@@ -125,7 +134,7 @@ only screen and (max-height:600px) {
         .text-zone{
             position: absolute;
             left: 15%;
-            top: 60%;
+            top: 40%;
             transform: translateY(-50%);
             width: 40%;
             height: 100%;
@@ -151,7 +160,7 @@ only screen and (max-height:600px) {
     
         h2 {
             color: #ffffff;
-            margin-top: 80px;
+            margin-top: 10px;
             font-weight: 600;
             font-size: 150%;
             font-family: sans-serif;
@@ -161,8 +170,8 @@ only screen and (max-height:600px) {
     
         .flat-button{
             position:absolute;
-            top: 22%;
-            left: 100%;
+            top: 48%;
+            left: 110%;
             color:#5CE1E6;
             font-size: 130%;
             font-weight: 400;

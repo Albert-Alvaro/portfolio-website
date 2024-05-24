@@ -152,7 +152,7 @@ const Projects = () => {
                 </div>
                 <div className="square-icon">
                     <img src={p8_1} alt="pyja"/>
-                    <h4>Web Gmae</h4>
+                    <h4>Web Game 1 : 2048</h4>
                     <h3>(Personal Project)</h3>
                     <div className="button-modal">
                     <Link to={{ pathname:'game1'}}>

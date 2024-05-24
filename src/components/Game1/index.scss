@@ -129,30 +129,29 @@
         }
     }
 
+    .back{
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 83%;
+        left: 47%;
+        .button-1{
+            background-color: #62b1dc;
+            color: black;
+            font-weight: 600;
+            text-align: center;
+            height: 30px;
+            width: 100px;
+            border-radius: 5px;
+        }
+        .button-1:hover{
+            background-image: linear-gradient(aqua, #03bffc);
+            color: black;
+        }
+    }
+
 }
 
-
-
-.back{
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 83%;
-    left: 47%;
-    .button-1{
-        background-color: #62b1dc;
-        color: black;
-        font-weight: 600;
-        text-align: center;
-        height: 30px;
-        width: 100px;
-        border-radius: 5px;
-    }
-    .button-1:hover{
-        background-image: linear-gradient(aqua, #03bffc);
-        color: black;
-    }
-}
 
 @media only screen and (device-width: 600px),
 only screen and (max-width:600px) {
@@ -185,8 +184,8 @@ only screen and (max-width:600px) {
             height: 280px;
         
             position: absolute;
-            left: 20%;
-            top: 34%;
+            left: 22%;
+            top: 37%;
         
             background-color: #cdc1b5;
             border: 5px solid #bbada0;
@@ -207,6 +206,45 @@ only screen and (max-width:600px) {
             justify-content: center;
             align-items: center;
         }
-    }
 
+        .button-modal{
+            position: absolute;
+            left: 47%;
+            top: 84%;
+            margin-bottom: 20px;
+            .button-1{
+                background-color: #cdc1b5;
+                color: black;
+                font-weight: 600;
+                text-align: center;
+                height: 30px;
+                width: 100px;
+            }
+            .button-1:hover{
+                background-image: linear-gradient(#eec744, #f4b17a);
+                color: black;
+            }
+        }
+    
+        .back{
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 92%;
+            left: 47%;
+            .button-1{
+                background-color: #62b1dc;
+                color: black;
+                font-weight: 600;
+                text-align: center;
+                height: 30px;
+                width: 100px;
+                border-radius: 5px;
+            }
+            .button-1:hover{
+                background-image: linear-gradient(aqua, #03bffc);
+                color: black;
+            }
+        }
+    }
 }

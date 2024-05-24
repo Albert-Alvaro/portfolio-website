@@ -10,6 +10,7 @@ import p5_1 from "../../assets/images/p5-1.png"
 import p6_1 from "../../assets/images/p6-1.png"
 import p7_1 from "../../assets/images/p7-1.png"
 import p8_1 from "../../assets/images/p8-1.png" 
+import wip from "../../assets/images/wip.png"
 
 import {motion} from "framer-motion"
 import { Link } from "react-router-dom"
@@ -156,6 +157,22 @@ const Projects = () => {
                     <h3>(Personal Project)</h3>
                     <div className="button-modal">
                     <Link to={{ pathname:'game1'}}>
+                        <motion.button
+                            whileHover={{ scale: 1.1}}
+                            whileTap={{scale:0.9}}
+                            className="button-1"
+                        >
+                            Play Demo!
+                        </motion.button>
+                        </Link>
+                    </div>
+                </div>
+                <div className="square-icon">
+                    <img src={wip} alt="pyja"/>
+                    <h4>Web Game 2 : Pixel Portfolio</h4>
+                    <h3>(Personal Project)</h3>
+                    <div className="button-modal">
+                    <Link to={{ pathname:'game2'}}>
                         <motion.button
                             whileHover={{ scale: 1.1}}
                             whileTap={{scale:0.9}}

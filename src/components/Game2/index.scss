@@ -1,0 +1,20 @@
+.game2{
+    h1 {
+        font-weight: 500;
+        left: 47%;
+        top: 5%;
+        position: absolute;
+        color: white;
+        font-size: 400%;
+    }
+
+    .game-cont{
+        width: 50%;
+        height: 50%;
+    }
+
+    canvas{
+        width: 50%;
+        height: 50%;
+    }
+}

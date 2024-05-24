@@ -170,9 +170,10 @@ const Projects = () => {
                 <div className="square-icon">
                     <img src={wip} alt="pyja"/>
                     <h4>Web Game 2 : Pixel Portfolio</h4>
+                    <h4>Work in Progress</h4>
                     <h3>(Personal Project)</h3>
                     <div className="button-modal">
-                    <Link to={{ pathname:'game2'}}>
+                    <Link to={{ pathname:'/projects'}}>
                         <motion.button
                             whileHover={{ scale: 1.1}}
                             whileTap={{scale:0.9}}

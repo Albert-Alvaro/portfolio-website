@@ -1,18 +1,21 @@
 import './index.scss'
 import kaboom from "kaboom";
-import sheet from "../../assets/images/spritesheet.png"
-import map from "../../assets/images/map.png"
 import mapson from "./map.json"
+import sheet from "../../assets/pix_assets/spritesheet.png"
+import map from "../../assets/pix_assets/map.png"
 import { scaleFactor } from './constant';
+import { useEffect, useRef } from 'react';
 
 
 const Game2 = () => {
-    const k = kaboom({
-        global: false,
-        touchToMouse: true,
-        canvas: document.getElementById("game")
-    });
-
+    const canvasRef = useRef(null);
+    useEffect(() => {
+        const k = kaboom({
+            debug:true,
+            global: false,
+            touchToMouse: true,
+            canvas: canvasRef.current
+        });
     k.loadSprite("spritesheet", sheet, {
         sliceX: 39,
         sliceY: 31,
@@ -32,10 +35,12 @@ const Game2 = () => {
     k.setBackground(k.Color.fromHex("#311047"))
 
     k.scene("main", async () => {
-        const mapData = await (await fetch(mapson)).json();
+        // const mapData = await((await fetch(mapson))).json();
+        const mapData = mapson
+        console.log(mapData)
         const layers = mapData.layers;
 
-        const map = k.make([
+        const map = k.add([
             k.sprite("map"), 
             k.pos(0), 
             k.scale(scaleFactor)
@@ -70,16 +75,35 @@ const Game2 = () => {
                     if (boundary.name) {
                         player.onCollide(boundary.name, () => {
                             player.isInDialogue = true;
-
+                            displayDialogue("test", () => player.isInDialogue = false)
                         });
                     }
 
                 };
+                continue;
             };
+            if (layer.name === "spawnpoint") {
+                for (const entity of layer.objects){
+                    if (entity.name === "Player"){
+                        player.pos = k.vec2(
+                            (map.pos.x + entity.x) *scaleFactor,
+                            (map.pos.y + entity.y) *scaleFactor
+                        );
+                        k.add(player);
+                        continue;
+                    }
+                }
+            }
+
         };
+
+        k.onUpdate(() => {
+            k.camPos(player.pos.x, player.pos.y +100)
+        })
     });
 
     k.go("main")
+    }, [])
 
     function displayDialogue(text, onDisplayEnd) {
         const dialogueUI = document.getElementById("textbox-container");
@@ -98,7 +122,18 @@ const Game2 = () => {
             }
 
             clearInterval(intervalRef);
-        }, 5)
+        }, 5);
+
+        const closeBtn = document.getElementById("close");
+        function onCloseBtnClick() {
+            onDisplayEnd();
+            dialogueUI.style.display = "none";
+            dialogue.innerHTML = "";
+            clearInterval(intervalRef);
+            closeBtn.removeEvent("click", onCloseBtnClick);
+        }
+
+        closeBtn.addEventListener("click", onCloseBtnClick);
     }
 
     return(
@@ -115,10 +150,9 @@ const Game2 = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div className='game-cont'>
-                    <canvas id='game'></canvas>
+                    <canvas id='game' ref={canvasRef}></canvas>
                 </div>
             </div>
         </div>

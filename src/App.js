@@ -19,7 +19,7 @@ function App(){
         <Route path='projects' element={<Projects/>} />
         <Route path="/projects/Projectsdesc/:id" element={<Projectdesc/>} exact />
         <Route path="/projects/game1" element={<Game1/>} exact />
-        <Route path="/projects/game2" element={<Game2/>} exact />
+        <Route path="game2" element={<Game2/>} exact />
       </Route>
     </Routes>
     </>

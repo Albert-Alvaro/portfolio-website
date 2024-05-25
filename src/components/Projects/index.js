@@ -173,7 +173,7 @@ const Projects = () => {
                     <h4>Work in Progress</h4>
                     <h3>(Personal Project)</h3>
                     <div className="button-modal">
-                    <Link to={{ pathname:'/projects'}}>
+                    <Link to={{ pathname:'game2'}}>
                         <motion.button
                             whileHover={{ scale: 1.1}}
                             whileTap={{scale:0.9}}

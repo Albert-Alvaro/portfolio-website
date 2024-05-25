@@ -292,6 +292,7 @@ const Game1 = () => {
                 </div>
 
                 <div className="button-modal">
+                    <Link to={{ pathname:'/'}}>
                             <motion.button
                                 whileHover={{ scale: 1.1}}
                                 whileTap={{scale:0.9}}
@@ -300,6 +301,7 @@ const Game1 = () => {
                             >
                                 Restart!
                             </motion.button>
+                    </Link>
                 </div>
                 <div className='back'>
                     <Link to={{ pathname:'/projects'}}>

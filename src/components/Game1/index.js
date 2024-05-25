@@ -283,33 +283,35 @@ const Game1 = () => {
     return(
         <>
         <div className='container game1'>
-            <h1>2048</h1>
-            <hr/>
-            <h2>Score: <span id='score'>0</span></h2>
-            <div id='board'>
+            <div className='cont'>
+                <h1>2048</h1>
+                <hr/>
+                <h2>Score: <span id='score'>0</span></h2>
+                <div id='board'>
 
-            </div>
+                </div>
 
-            <div className="button-modal">
+                <div className="button-modal">
+                            <motion.button
+                                whileHover={{ scale: 1.1}}
+                                whileTap={{scale:0.9}}
+                                onClick={restart}
+                                className="button-1"
+                            >
+                                Restart!
+                            </motion.button>
+                </div>
+                <div className='back'>
+                    <Link to={{ pathname:'/projects'}}>
                         <motion.button
                             whileHover={{ scale: 1.1}}
                             whileTap={{scale:0.9}}
-                            onClick={restart}
                             className="button-1"
                         >
-                            Restart!
+                            Back
                         </motion.button>
-            </div>
-            <div className='back'>
-                <Link to={{ pathname:'/projects'}}>
-                    <motion.button
-                        whileHover={{ scale: 1.1}}
-                        whileTap={{scale:0.9}}
-                        className="button-1"
-                    >
-                        Back
-                    </motion.button>
-                </Link>
+                    </Link>
+                </div>
             </div>
         </div>
         <Loader type='pacman' />

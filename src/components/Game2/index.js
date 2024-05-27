@@ -143,7 +143,6 @@ const Game2 = () => {
             const valid = checkIfValid(e.target)
     
             const takenByOpponent = e.target.firstChild?.classList.contains(opponentGo)
-            console.log(e.target.parentNode)
     
             if (correctGo) {
                 if (takenByOpponent && valid ){
@@ -216,7 +215,7 @@ const Game2 = () => {
                 case 'pawn' :
                     const starterRow = [8,9,10,11,12,13,14,15,15]
                     if (
-                        (starterRow.includes(startId) && startId + width * 2 === targetId )|| 
+                        (starterRow.includes(startId) && startId + width * 2 === targetId && !document.querySelector(`[square-id="${startId + width * 2}"]`).firstChild)|| 
                         (startId + width === targetId && !document.querySelector(`[square-id="${startId + width }"]`).firstChild) || 
                         (startId + width - 1 === targetId && document.querySelector(`[square-id="${startId + width - 1}"]`).firstChild) || 
                         (startId + width + 1 === targetId && document.querySelector(`[square-id="${startId + width + 1}"]`).firstChild) 
@@ -431,15 +430,15 @@ const Game2 = () => {
         }
     
         function checkWin() {
-            const kings = Array.from(document.querySelectorAll('#king'))
+            const kings = Array.from(ref2.current.querySelectorAll('#king'))
             if (!kings.some(king => king.firstChild.classList.contains('white'))) {
                 infoDisplay.innerHTML = "Black player wins"
-                const allSquares = document.querySelectorAll(".square")
+                const allSquares = ref2.current.querySelectorAll(".square")
                 allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false))
             }
             if (!kings.some(king => king.firstChild.classList.contains('black'))) {
                 infoDisplay.innerHTML = "White player wins"
-                const allSquares = document.querySelectorAll(".square")
+                const allSquares = ref2.current.querySelectorAll(".square")
                 allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false))
             }
     

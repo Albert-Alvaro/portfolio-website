@@ -10,7 +10,8 @@ import p5_1 from "../../assets/images/p5-1.png"
 import p6_1 from "../../assets/images/p6-1.png"
 import p7_1 from "../../assets/images/p7-1.png"
 import p8_1 from "../../assets/images/p8-1.png" 
-import wip from "../../assets/images/wip.png"
+import p9_1 from "../../assets/images/p9-1.png"
+// import wip from "../../assets/images/wip.png"
 
 import {motion} from "framer-motion"
 import { Link } from "react-router-dom"
@@ -168,9 +169,8 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="square-icon">
-                    <img src={wip} alt="pyja"/>
+                    <img src={p9_1} alt="pyja"/>
                     <h4>Web Game 2 : Chess</h4>
-                    <h4>Work in Progress</h4>
                     <h3>(Personal Project)</h3>
                     <div className="button-modal">
                     <Link to={{ pathname:'game2'}}>

@@ -1,6 +1,7 @@
 import { createRef, useEffect } from 'react';
 import './index.scss'
 import {motion} from "framer-motion"
+import Loader from 'react-loaders';
 
 const Game2 = () => {
 
@@ -19,6 +20,7 @@ const Game2 = () => {
         const board = ref2.current.querySelector("#gameboard");
         const playerDisplay = ref2.current.querySelector("#player");
         const infoDisplay = ref2.current.querySelector("#info-display");
+        playerDisplay.textContent = 'black'
 
         const createBoard =  () => { 
             startPieces.forEach((startPiece, i) => {
@@ -342,30 +344,38 @@ const Game2 = () => {
     
         }
     
-    }, [])
+    }, [ref2])
     
 
-
+    const restart = (e) => {
+        e.preventDefault();
+        window.location.reload();
+    }
 
     return(
+        <>
         <div className='container game2'>
             <div className='cont' ref={ref2}>
-            <div className="button-modal">
-                <motion.button
-                    whileHover={{ scale: 1.1}}
-                    whileTap={{scale:0.9}}
-                    className="button-1"
-                >
-                    Start!
-                </motion.button>
-            </div>
-            <div id="gameboard" ref={ref}>
+                <h1 id='info-display'> </h1>
+                <div id="gameboard" ref={ref}>
 
-            </div>                
-                <p>It is <span id='player'></span>'s turn</p>
-                <p id='info-display'></p>
+                </div>                
+                    <h3>It is <span id='player'></span>'s turn</h3>
+                    
+                <div className="button-modal">
+                    <motion.button
+                        whileHover={{ scale: 1.1}}
+                        whileTap={{scale:0.9}}
+                        onClick={restart}
+                        className="button-1"
+                    >
+                        Restart!
+                    </motion.button>
+                </div>
             </div>
         </div>
+        <Loader type='pacman'/>
+        </>
     )
 }
 

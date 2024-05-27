@@ -1,0 +1,75 @@
+.game2{
+
+    .button-modal{
+        position: absolute;
+        left: 20%;
+        top: 60%;
+        margin-top: 5vh;
+        margin-bottom: 20px;
+        text-align: center;
+        .button-1{
+            background-color: #cdc1b5;
+            color: black;
+            font-weight: 600;
+            text-align: center;
+            height: 30px;
+            width: 100px;
+        }
+        .button-1:hover{
+            background-image: linear-gradient(#eec744, #f4b17a);
+            color: black;
+        }
+    }
+    .cont{
+        position: absolute;
+        left: 20%;
+        #gameboard{
+            
+            width: 320px;
+            height: 320px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .trigger{
+                display: none;
+                position: absolute;
+            }
+
+            .square{
+                height: 40px;
+                width: 40px;
+                position: relative;
+
+                svg{
+                    height:30px;
+                    width: 30px;
+                    margin: 5px;
+                    position: relative;
+                    z-index: -9;
+                }
+
+                path{
+                    position: relative;
+                    z-index: -10;
+                }
+                .piece{
+                    position: relative;
+                    z-index: 9;
+                }
+            }
+
+            .beige{
+                background-color: rgb(110,110,98);
+            }
+            .brown{
+                background-color: brown;
+            }
+            .black{
+                fill: black;
+            }
+            .white{
+                fill: wheat;
+            }
+        }
+    }
+}

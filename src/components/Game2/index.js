@@ -20,7 +20,62 @@ const Game2 = () => {
         const board = ref2.current.querySelector("#gameboard");
         const playerDisplay = ref2.current.querySelector("#player");
         const infoDisplay = ref2.current.querySelector("#info-display");
-        playerDisplay.textContent = 'black'
+        playerDisplay.textContent = 'black';
+
+        (function(d) {
+            var
+                ce = function(e, n) {
+                    var a = document.createEvent("CustomEvent");
+                    a.initCustomEvent(n, true, true, e.target);
+                    e.target.dispatchEvent(a);
+                    a = null;
+                    return false
+                },
+                nm = true,
+                sp = {
+                    x: 0,
+                    y: 0
+                },
+                ep = {
+                    x: 0,
+                    y: 0
+                },
+                touch = {
+                    touchstart: function(e) {
+                        sp = {
+                            x: e.touches[0].pageX,
+                            y: e.touches[0].pageY
+                        }
+                    },
+                    touchmove: function(e) {
+                        nm = false;
+                        ep = {
+                            x: e.touches[0].pageX,
+                            y: e.touches[0].pageY
+                        }
+                    },
+                    touchend: function(e) {
+                        if (nm) {
+                            ce(e, 'fc')
+                        } else {
+                            var x = ep.x - sp.x,
+                                xr = Math.abs(x),
+                                y = ep.y - sp.y,
+                                yr = Math.abs(y);
+                            if (Math.max(xr, yr) > 20) {
+                                ce(e, (xr > yr ? (x < 0 ? 'swl' : 'swr') : (y < 0 ? 'swu' : 'swd')))
+                            }
+                        };
+                        nm = true
+                    },
+                    touchcancel: function(e) {
+                        nm = false
+                    }
+                };
+            for (var a in touch) {
+                d.addEventListener(a, touch[a], false);
+            }
+        })(document);
 
         const createBoard =  () => { 
             startPieces.forEach((startPiece, i) => {
@@ -63,6 +118,11 @@ const Game2 = () => {
             square.addEventListener('dragstart', dragStart)
             square.addEventListener('dragover', dragOver)
             square.addEventListener('drop', dragDrop)
+
+            square.addEventListener("touchstart", dragStart);
+            square.addEventListener("touchmove", dragOver);
+            square.addEventListener("touchend",touchDrop);
+
     
         })
     
@@ -72,7 +132,9 @@ const Game2 = () => {
         function dragStart(e) {
             startPositionId = e.target.parentNode.getAttribute('square-id');
             draggedElement = e.target
+
         }
+
         function dragDrop(e) {
             e.stopPropagation()
             const correctGo = draggedElement.firstChild.classList.contains(playerGo)
@@ -81,7 +143,7 @@ const Game2 = () => {
             const valid = checkIfValid(e.target)
     
             const takenByOpponent = e.target.firstChild?.classList.contains(opponentGo)
-    
+            console.log(e.target.parentNode)
     
             if (correctGo) {
                 if (takenByOpponent && valid ){
@@ -106,6 +168,44 @@ const Game2 = () => {
                 }
             }
         }
+
+        function touchDrop(e) {
+            e.stopPropagation()
+            var changedTouch = e.changedTouches[0]
+            const event = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY)
+            const correctGo = draggedElement.firstChild.classList.contains(playerGo)
+            const taken = event.classList.contains('piece')
+            const opponentGo =playerGo === 'white' ?'black' : 'white'
+            const valid = checkIfValid(event)
+            
+            const takenByOpponent = event.firstChild?.classList.contains(opponentGo)
+
+            console.log(taken, valid, takenByOpponent, opponentGo, document.elementFromPoint(changedTouch.clientX, changedTouch.clientY))
+            
+    
+            if (correctGo) {
+                if (takenByOpponent && valid ){
+                    event.parentNode.append(draggedElement)
+                    event.remove()
+                    checkWin()
+                    changePlayer()
+                    return;
+                }
+    
+                if (taken && !takenByOpponent) {
+                    infoDisplay.textContent = 'Invalid Move'
+                    setTimeout(() => infoDisplay.textContent = "", 2000)
+                    return;
+                }
+    
+                if (valid){
+                    event.append(draggedElement)
+                    checkWin()
+                    changePlayer()
+                    return;
+                }
+            }
+        }
     
         function checkIfValid(target) {
             const targetId = Number(target.getAttribute('square-id')) || Number(target.parentNode.getAttribute('square-id'))
@@ -116,8 +216,8 @@ const Game2 = () => {
                 case 'pawn' :
                     const starterRow = [8,9,10,11,12,13,14,15,15]
                     if (
-                        (starterRow.includes(startId) && startId + width * 2 === targetId) || 
-                        startId + width === targetId || 
+                        (starterRow.includes(startId) && startId + width * 2 === targetId )|| 
+                        (startId + width === targetId && !document.querySelector(`[square-id="${startId + width }"]`).firstChild) || 
                         (startId + width - 1 === targetId && document.querySelector(`[square-id="${startId + width - 1}"]`).firstChild) || 
                         (startId + width + 1 === targetId && document.querySelector(`[square-id="${startId + width + 1}"]`).firstChild) 
                     ) {
@@ -299,6 +399,7 @@ const Game2 = () => {
     
         function dragOver(e) {
             e.preventDefault()
+            console.log(e.target)
         }
     
         function changePlayer() {

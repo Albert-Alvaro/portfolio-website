@@ -52,11 +52,13 @@
             }
 
             .square{
+                touch-action: none;
                 height: 80px;
                 width: 80px;
                 position: relative;
 
                 svg{
+                    touch-action: none;
                     height:60px;
                     width: 60px;
                     margin: 10px;
@@ -65,10 +67,12 @@
                 }
 
                 path{
+                    touch-action: none;
                     position: relative;
                     z-index: -10;
                 }
                 .piece{
+                    touch-action: none;
                     position: relative;
                     z-index: 9;
                 }

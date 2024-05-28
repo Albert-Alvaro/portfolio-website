@@ -10,14 +10,14 @@
             margin: 0 auto;
             text-align: center;
             width: 70%;
-            font-size: 400%;
+            font-size: 250%;
             font-weight: 600;
             color: white;
             background-color: black;
         }
         h1{
             text-align: center;
-            font-size: 500%;
+            font-size: 300%;
             font-weight: 600;  
             color: white;
         }
@@ -41,8 +41,8 @@
         }
         #gameboard{
             
-            width: 640px;
-            height: 640px;
+            width: 64vh;
+            height: 64vh;
             display: flex;
             flex-wrap: wrap;
 
@@ -53,15 +53,15 @@
 
             .square{
                 touch-action: none;
-                height: 80px;
-                width: 80px;
+                height: 8vh;
+                width: 8vh;
                 position: relative;
 
                 svg{
                     touch-action: none;
-                    height:60px;
-                    width: 60px;
-                    margin: 10px;
+                    height:7vh;
+                    width: 7vh;
+                    margin: 5px;
                     position: relative;
                     z-index: -9;
                 }

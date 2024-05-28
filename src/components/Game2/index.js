@@ -393,6 +393,9 @@ const Game2 = () => {
                     ){
                         return true;
                     }
+                    break;
+                    default :
+                    return false;
             }
         }
     
@@ -456,12 +459,11 @@ const Game2 = () => {
         <>
         <div className='container game2'>
             <div className='cont' ref={ref2}>
-                <h1 id='info-display'> </h1>
                 <div id="gameboard" ref={ref}>
 
                 </div>                
                     <h3>It is <span id='player'></span>'s turn</h3>
-                    
+                    <h1 id='info-display'> </h1>
                 <div className="button-modal">
                     <motion.button
                         whileHover={{ scale: 1.1}}

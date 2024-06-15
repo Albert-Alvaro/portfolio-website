@@ -24,6 +24,28 @@
         color: black;
     }
 }
+.gh-link{
+    position:absolute;
+    top: 80%;
+    left: 20%;
+    color:#5CE1E6;
+    font-size: 130%;
+    font-weight: 400;
+    letter-spacing: normal;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid #5CE1E6;
+    margin-top: 25px;
+    float: left;
+    animation: fadeIn 1s 1.8s backwards;
+    white-space: nowrap;
+
+    &:hover{
+        background: #5CE1E6;
+        color: #333;
+    }
+}
 
 @media only screen and (device-height: 600px),
 only screen and (max-height:600px) { 
@@ -68,6 +90,29 @@ only screen and (max-height:600px) {
         }
     }
 
+    .gh-link{
+        position:absolute;
+        top: 80%;
+        left: 13%;
+        color:#5CE1E6;
+        font-size: 130%;
+        font-weight: 400;
+        letter-spacing: normal;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid #5CE1E6;
+        margin-top: 25px;
+        float: left;
+        animation: fadeIn 1s 1.8s backwards;
+        white-space: nowrap;
+    
+        &:hover{
+            background: #5CE1E6;
+            color: #333;
+        }
+    }
+
 }
 
 @media only screen and (device-width: 600px),
@@ -97,6 +142,29 @@ only screen and (max-width:600px) {
         .button-1:hover{
             background-image: linear-gradient(aqua, #03bffc);
             color: black;
+        }
+    }
+
+    .gh-link{
+        position:absolute;
+        top: 80%;
+        left: 20%;
+        color:#5CE1E6;
+        font-size: 130%;
+        font-weight: 400;
+        letter-spacing: normal;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid #5CE1E6;
+        margin-top: 25px;
+        float: left;
+        animation: fadeIn 1s 1.8s backwards;
+        white-space: nowrap;
+    
+        &:hover{
+            background: #5CE1E6;
+            color: #333;
         }
     }
 }

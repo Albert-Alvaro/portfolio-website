@@ -21,6 +21,7 @@ import p7_3 from "../../assets/images/p7-3.png"
 import {motion} from "framer-motion"
 import Loader from 'react-loaders'
 import Slider from '../Slider'
+import { useEffect } from 'react'
 const img = [
     {
         ig: "p1_1",
@@ -66,6 +67,11 @@ const Projectdesc = () => {
     let igd = image.join("");
     const spec_img = img.find(imeg => (imeg.ig === igd))
     const spec_data = data.find(cont => (cont.ids === id))
+    let check = true
+    if (spec_data.link === ""){
+        check = false
+    }
+    console.log(check)
     return(
         <>
         <div className='container project-desc'>
@@ -77,6 +83,7 @@ const Projectdesc = () => {
                         <Slider slides={spec_img.imageList}/>
                     </div>
                 </div>
+                { check ? (<a href={spec_data.link} target="_blank" rel="noreferrer" className='gh-link'>Github Link!</a>) : (<a href={spec_data.link} target="_blank" style={{display:'none'}} rel="noreferrer" className='gh-link'>Github Link!</a>)}
                 <div className='back'>
                         <Link to={{ pathname:'/projects'}}>
                             <motion.button

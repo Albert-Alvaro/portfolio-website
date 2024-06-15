@@ -115,7 +115,7 @@
 .project-desc{
     .text-zone{
         position: absolute;
-        left: 20%;
+        left: 15%;
         top: 50%;
         width: 35%;
         vertical-align: middle;
@@ -269,14 +269,14 @@ only screen and (max-height:600px) {
         .text-zone{
             position: absolute;
             left: 12%;
-            top: 16%;
+            top: 5%;
             width: 85%;
             display: block;
             max-height: 90%;
             transform: translateY(-50%);
             p {
                 font-style: 50%;
-                font-size: 90%;
+                font-size: 70%;
                 color: #fff;
                 font-family: sans-serif;
                 font-weight: 300;
@@ -308,7 +308,7 @@ only screen and (max-width:600px) {
         .text-zone{
             position: absolute;
             left: 20%;
-            top: 12%;
+            top: 5%;
             width: 70%;
             vertical-align: middle;
             display: table-cell;

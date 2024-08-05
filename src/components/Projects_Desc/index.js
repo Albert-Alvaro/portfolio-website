@@ -18,6 +18,9 @@ import p6_1 from "../../assets/images/p6-1.png"
 import p7_1 from "../../assets/images/p7-1.png"
 import p7_2 from "../../assets/images/p7-2.png"
 import p7_3 from "../../assets/images/p7-3.png"
+import p10_1 from "../../assets/images/p10-1.png"
+import p10_2 from "../../assets/images/p10-2.png"
+import p10_3 from "../../assets/images/p10-3.png"
 import {motion} from "framer-motion"
 import Loader from 'react-loaders'
 import Slider from '../Slider'
@@ -57,6 +60,11 @@ const img = [
         ig: "p7_1",
         image: p7_1,
         imageList: [p7_1, p7_2, p7_3]
+    },
+    {
+        ig: "p10_1",
+        image: p10_1,
+        imageList: [p10_1, p10_2, p10_3]
     }
 ]
 

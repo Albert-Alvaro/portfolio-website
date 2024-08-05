@@ -11,6 +11,7 @@ import p6_1 from "../../assets/images/p6-1.png"
 import p7_1 from "../../assets/images/p7-1.png"
 import p8_1 from "../../assets/images/p8-1.png" 
 import p9_1 from "../../assets/images/p9-1.png"
+import p10_1 from "../../assets/images/p10-1.png"
 // import wip from "../../assets/images/wip.png"
 
 import {motion} from "framer-motion"
@@ -180,6 +181,22 @@ const Projects = () => {
                             className="button-1"
                         >
                             Play Demo!
+                        </motion.button>
+                        </Link>
+                    </div>
+                </div>
+                <div className="square-icon">
+                    <img src={p10_1} alt="pyja"/>
+                    <h4>Skill Based Game : Mastery</h4>
+                    <h3>(Personal Project)</h3>
+                    <div className="button-modal">
+                    <Link to={{ pathname:'Projectsdesc/10'}}>
+                        <motion.button
+                            whileHover={{ scale: 1.1}}
+                            whileTap={{scale:0.9}}
+                            className="button-1"
+                        >
+                            READ MORE
                         </motion.button>
                         </Link>
                     </div>

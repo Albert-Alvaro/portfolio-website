@@ -32,4 +32,10 @@ export const data =[{
     ids: "7",
     content : "I have also worked on a 3D Modelling project where I had to create 3D Models and environments using th Autodesk Maya software. I creeated a variety of models and also modified some models which I had downloaded online as well, the models which I created included things such as trees, chairs, tables, artillery canons, trenches and more. All of to most of the models which I have created were either textured using basic texturing or using UV-texturing. I had also used the models which I have created to create an animation utilizing them, this animation makes use of the various I have created to display a short aniamtion about war. The animation used skeleton aniamtion and key-frame aniamtion as well, both were integral for th ecompletion of my animation.",
     link: ""
-}];
+},
+{
+    ids:"10",
+    content:"A passion project, a game created using Vite and JavaScript. A game meant to be something which as the naem suggests focuses on the players mastery, currently still a work in progress. This game utilizes some free assets from the internet as well as some assets which was created by myself as well.",
+    link:"https://github.com/Albert-Alvaro/Mastery"
+}
+];
